@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FirstController">
+   <children>
+      <Text layoutX="18.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza: " />
+      <ComboBox fx:id="pizzaStyle" layoutX="14.0" layoutY="38.0" onAction="#pizzaSelection" prefWidth="150.0" />
+      <Text layoutX="18.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:" />
+      <ComboBox fx:id="pizzaSize" layoutX="14.0" layoutY="172.0" prefHeight="25.0" prefWidth="150.0" />
+      <ListView fx:id="toppingOptions" layoutX="194.0" layoutY="13.0" prefHeight="256.0" prefWidth="144.0" />
+      <ListView fx:id="selectedToppings" layoutX="537.0" layoutY="13.0" prefHeight="321.0" prefWidth="144.0" />
+      <Button fx:id="addToppings" layoutX="349.0" layoutY="51.0" mnemonicParsing="false" onAction="#add_toppings" prefHeight="25.0" prefWidth="177.0" text="Add Toppings &gt;&gt;" />
+      <Button fx:id="removeToppings" layoutX="349.0" layoutY="112.0" mnemonicParsing="false" onAction="#remove_toppings" prefHeight="25.0" prefWidth="177.0" text="&lt;&lt; Remove Toppings" />
+      <Button fx:id="clearSelection" layoutX="349.0" layoutY="243.0" mnemonicParsing="false" onAction="#clear_button" prefHeight="25.0" prefWidth="177.0" text="Clear Selection" />
+      <TextArea fx:id="outputArea" layoutX="22.0" layoutY="460.0" prefHeight="159.0" prefWidth="658.0" />
+      <ImageView fx:id="pizzaImage" fitHeight="169.0" fitWidth="324.0" layoutX="14.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/BuildYourOwn.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="addToOrder" layoutX="537.0" layoutY="350.0" mnemonicParsing="false" onAction="#add_to_order" prefHeight="25.0" prefWidth="144.0" text="Add to Order" />
+      <Button fx:id="showOrder" layoutX="537.0" layoutY="390.0" mnemonicParsing="false" onAction="#showOrder" prefHeight="25.0" prefWidth="144.0" text="Show Order" />
+   </children>
+</AnchorPane>
